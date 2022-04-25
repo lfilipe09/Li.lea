@@ -10,16 +10,13 @@ export default async (req, res) => {
     await doc.useServiceAccountAuth(credentials)
     await doc.loadInfo()
 
-    const sheet = doc.sheetsById[0]
+    const sheet = doc.sheetsByIndex[1]
     await sheet.loadCells('A2:F2')
 
     const chapterOneLikes = sheet.getCell(1, 1)
     const chapterTwoLikes = sheet.getCell(1, 3)
     const chapterThreeLikes = sheet.getCell(1, 5)
     req.body = JSON.parse(req.body)
-    console.log('aqui o req: ', req)
-    console.log('aqui o req.body: ', req.body)
-    console.log('aqui o req.body.chapterOneLikes: ', req.body.chapterOneLikes)
 
     chapterOneLikes.value = req.body.chapterOneLikes
 

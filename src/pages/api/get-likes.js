@@ -10,7 +10,7 @@ export default async (req, res) => {
     await doc.useServiceAccountAuth(credentials)
     await doc.loadInfo()
 
-    const sheet = doc.sheetsById[0]
+    const sheet = doc.sheetsByIndex[1]
     await sheet.loadCells('A2:F2')
 
     const chapterOneLikes = sheet.getCell(1, 1)

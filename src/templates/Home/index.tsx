@@ -67,13 +67,14 @@ const Home = ({
 
   const postFeedback = async (value: string[]) => {
     try {
+      console.log('olha o value chegando: ', value)
       const newPostFeedback = {
-        qurio_chapter_1_feedback: value[0].toString(),
-        qurio_chapter_1_likes: '.',
-        qurio_chapter_2_feedback: value[1].toString(),
-        qurio_chapter_2_likes: '.',
-        qurio_chapter_3_feedback: value[2].toString(),
-        qurio_chapter_3_likes: '.'
+        lilea_chapter_1_feedback: value[0].toString(),
+        lilea_chapter_1_likes: '.',
+        lilea_chapter_2_feedback: value[1].toString(),
+        lilea_chapter_2_likes: '.',
+        lilea_chapter_3_feedback: value[2].toString(),
+        lilea_chapter_3_likes: '.'
       }
       const response = await fetch(
         `${process.env.NEXT_PUBLIC_WEBSITE_URL}/api/post-feedback`,

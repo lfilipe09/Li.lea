@@ -4,22 +4,31 @@ const TextContentMock01: TextContentProps = {
   title: 'Liderança para a nova economia',
   content: `
 <p>
-Descentralização, agilidade e digitalização: esses são os princípios da nova economia. O alinhamento a esse cenário passa por mudanças essenciais no mindset de liderança e nos modelos de culturas organizacionais. Diego Barreto, VP de Finanças e Estratégia do iFood e professor de Nova Economia da HSM University, resume essa adaptação em três pilares. 
+Cunhando em 2010, por Tim Brown, CEO da consultoria IDEO, o conceito de profissional T-Shaped continua mais relevante do que nunca. Representado pelo colaborador que tem profundo conhecimento de sua área de atuação e navega por diversas especializações complementares, esse perfil se mostra cada vez mais importante para atender aos desafios de um mercado cada vez mais orientado pela velocidade de mudanças e pela ambidestria organizacional entre inovação e resultados    
 </p>
 
-<h4>ADAPTABILIDADE</h4>
-  O conceito de estratégia pode ser traduzido pelo caminho escolhido para chegar do ponto A ao ponto B — sendo o ponto B o destino que oferece mais vantagem competitiva para uma organização. Em cenários marcados pela volatilidade de modelos de negócios e comportamentos de consumidores, é preciso encurtar esses caminhos e criar planejamentos orientados pelo curto prazo.<br />
-<h4>CULTURA DATA-DRIVEN</h4>
-  O avanço tecnológico permite que gestores e empresas acessem dados em uma velocidade exponencial. Esse cenário permite que organizações de todos os portes atualizem informações confiáveis a todo momento. Dessa maneira, é possível reavaliar teses de negócios com base em eventos que acontecem em tempo real. 
+<h2>5 MANDAMENTOS PARA ATRAIR E DESENVOLVER PROFISSIONAIS T-SHAPED</h2>
 <br />
-  <h4>PENSAMENTO SISTÊMICO</h4>
-  Inovação e estratégia não são parte de um manual: são resultados de leitura de contextos. As lideranças são pressionadas a repensar práticas e estratégias por causa das mudanças de contexto dentro e fora das organizações. A adoção de modelos ágeis e a descentralização de dinâmicas de poder são as ferramentas que permitem essa adaptação no tempo certo. 
+<b>Crie um ambiente de autonomia e accountability</b><br />
+Não se limite a dar ordens e instruções.
+<br /><br />
+<b>Tolerar riscos não é o suficiente.</b><br />
+É preciso encorajar as pessoas a tomá-los e lidar com as consequências de suas decisões. 
+<br /><br />
+<b>Em vez de punir o fracasso,</b><br />
+comemore as conquistas e redefina qual é a medida do sucesso (um avanço em um projeto ou uma solução pontual, por exemplo). 
+<br /><br />
+<b>Certifique-se de que os colaboradores tenham oportunidades</b><br />
+de aprofundar suas habilidades e aperfeiçoar sua prática. Disponibilize tempo, condições e recursos para que eles possam se desenvolver e se aprofundar em diferentes áreas. 
+<br /><br />
+<b>Permita que as equipes se auto-organizem em torno de projetos que envolvem as paixões de seus membros.</b><br />
+Se o time estiver trabalhando em algo que detesta,
+ou para um cliente que não respeita, provavelmente não investirá seus melhores esforços.
+<br /><br />
 
+<i>Fonte: Barry Katz, professor da Stanford University e consultor da IDEO </i>
 
-<hr />
-<a = href="https://experience.hsm.com.br/posts/hsm-expo-21-diego-barreto" target="_blank">
-  Acesse aqui o video </a>
-</p>`
+`
 }
 
 export default TextContentMock01
