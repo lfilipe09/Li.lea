@@ -13,7 +13,7 @@ import Menu from 'components/Menu'
 import TextChapterOpener from 'components/TextChapterOpener'
 import TextContent from 'components/TextContent'
 import TextSideColumn from 'components/TextSideColumn'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import * as S from './styles'
 import QuizBox from 'components/QuizBox'
 import quizItems from '../../components/QuizBox/mock'
@@ -21,7 +21,7 @@ import quizItems from '../../components/QuizBox/mock'
 export type HomeTemplateProps = {
   author: string
   backgroundUrl: string
-  publicationDate: Date
+  publicationDate: string
   HeaderTitle: string
   items: BannerProps[]
   chaptersLikes: string[]
@@ -44,6 +44,24 @@ const Home = ({
     chaptersLikes.map(Number)
   )
   // const [feedbackData, setFeedbackDate] = useState(['.', '.', '.'])
+  useEffect(() => {
+    loadData()
+  }, [])
+
+  const loadData = async () => {
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_WEBSITE_URL}/api/get-likes`,
+      {
+        method: 'GET'
+      }
+    )
+    const data = await response.json()
+    setNewChaptersLikes([
+      data.chapterOneLikes,
+      data.chapterTwoLikes,
+      data.chapterThreeLikes
+    ])
+  }
 
   const updateLikes = async (value: string[]) => {
     try {
@@ -52,10 +70,13 @@ const Home = ({
         chapterTwoLikes: value[1].toString(),
         chapterThreeLikes: value[2].toString()
       }
-      const response = await fetch('/api/update-like-amount', {
-        method: 'POST',
-        body: JSON.stringify(newChaptersLikes)
-      })
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_WEBSITE_URL}/api/update-like-amount`,
+        {
+          method: 'POST',
+          body: JSON.stringify(newChaptersLikes)
+        }
+      )
       console.log(response)
     } catch (err) {
       console.log('Erro ao atualizar likes', err)
@@ -64,7 +85,7 @@ const Home = ({
 
   const postFeedback = async (value: string[]) => {
     try {
-      console.log('olha o value chegando: ', value)
+      console.log('olha o value chegando: ')
       const newPostFeedback = {
         lilea_chapter_1_feedback: value[0].toString(),
         lilea_chapter_1_likes: '.',
@@ -73,10 +94,13 @@ const Home = ({
         lilea_chapter_3_feedback: value[2].toString(),
         lilea_chapter_3_likes: '.'
       }
-      const response = await fetch('/api/post-feedback', {
-        method: 'POST',
-        body: JSON.stringify(newPostFeedback)
-      })
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_WEBSITE_URL}/api/post-feedback`,
+        {
+          method: 'POST',
+          body: JSON.stringify(newPostFeedback)
+        }
+      )
       console.log(response)
     } catch (err) {
       console.log('Erro ao atualizar likes', err)
@@ -160,7 +184,9 @@ const Home = ({
                   setLikeButtonClickedIndex([...likeButtonClickedIndex, index])
                   const tempChaptersLikes = newChaptersLikes.map(
                     (chapterLike, indexChapter) =>
-                      indexChapter === index ? chapterLike + 1 : chapterLike
+                      indexChapter === index
+                        ? Number(chapterLike) + 1
+                        : Number(chapterLike)
                   )
                   setNewChaptersLikes(tempChaptersLikes)
                   updateLikes(tempChaptersLikes.map(String))

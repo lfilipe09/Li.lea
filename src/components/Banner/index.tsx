@@ -6,7 +6,7 @@ export type BannerProps = {
   format: string
   content?: string
   handleOnClick?: () => void
-  publicationDate?: Date
+  publicationDate?: string
   reference?: string
   link?: string
   imgDesktop?: string[]
