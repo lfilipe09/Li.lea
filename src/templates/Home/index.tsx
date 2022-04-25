@@ -52,13 +52,10 @@ const Home = ({
         chapterTwoLikes: value[1].toString(),
         chapterThreeLikes: value[2].toString()
       }
-      const response = await fetch(
-        `${process.env.NEXT_PUBLIC_WEBSITE_URL}/api/update-like-amount`,
-        {
-          method: 'POST',
-          body: JSON.stringify(newChaptersLikes)
-        }
-      )
+      const response = await fetch('/api/update-like-amount', {
+        method: 'POST',
+        body: JSON.stringify(newChaptersLikes)
+      })
       console.log(response)
     } catch (err) {
       console.log('Erro ao atualizar likes', err)
@@ -76,13 +73,10 @@ const Home = ({
         lilea_chapter_3_feedback: value[2].toString(),
         lilea_chapter_3_likes: '.'
       }
-      const response = await fetch(
-        `${process.env.NEXT_PUBLIC_WEBSITE_URL}/api/post-feedback`,
-        {
-          method: 'POST',
-          body: JSON.stringify(newPostFeedback)
-        }
-      )
+      const response = await fetch('/api/post-feedback', {
+        method: 'POST',
+        body: JSON.stringify(newPostFeedback)
+      })
       console.log(response)
     } catch (err) {
       console.log('Erro ao atualizar likes', err)

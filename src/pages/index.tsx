@@ -6,12 +6,9 @@ export default function Index(props: HomeTemplateProps) {
 }
 
 export async function getStaticProps() {
-  const response = await fetch(
-    `${process.env.NEXT_PUBLIC_WEBSITE_URL}/api/get-likes`,
-    {
-      method: 'GET'
-    }
-  )
+  const response = await fetch('/api/get-likes', {
+    method: 'GET'
+  })
   const data = await response.json()
 
   return {
