@@ -9,13 +9,16 @@ export default async (req, res) => {
       private_key: fromBase64(process.env.SHEET_PRIVATE_KEY)
     })
     await doc.loadInfo()
-    res.end(console.log('Olha o req.body', req.body))
 
     const sheet = doc.sheetsByIndex[1]
 
     await sheet.addRow(JSON.stringify(req.body))
 
-    res.end(console.log('deu bom!'))
+    res.end(
+      JSON.stringify({
+        success: 'deu certo'
+      })
+    )
   } catch (err) {
     console.log('deu erro ', err)
     res.end(
