@@ -74,10 +74,7 @@ const Home = ({
         `${process.env.NEXT_PUBLIC_WEBSITE_URL}/api/update-like-amount`,
         {
           method: 'POST',
-          body: JSON.stringify(newChaptersLikes),
-          headers: {
-            'Content-Type': 'application/json'
-          }
+          body: JSON.stringify(newChaptersLikes)
         }
       )
       console.log(response)
@@ -100,10 +97,7 @@ const Home = ({
         `${process.env.NEXT_PUBLIC_WEBSITE_URL}/api/post-feedback`,
         {
           method: 'POST',
-          body: JSON.stringify(newPostFeedback),
-          headers: {
-            'Content-Type': 'application/json'
-          }
+          body: JSON.stringify(newPostFeedback)
         }
       )
       console.log(response)
