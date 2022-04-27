@@ -9,7 +9,11 @@ export default function Index() {
     `${process.env.NEXT_PUBLIC_WEBSITE_URL}/api/get-likes`,
     fetcher
   )
-  if (error) return 'An error has occurred.'
+  if (error) {
+    window.alert(error)
+    alert(error)
+    return 'An error has occurred.'
+  }
   if (!data) return 'Loading...'
   const Pageprops = {
     HeaderTitle: 'Liderança 4.0',
