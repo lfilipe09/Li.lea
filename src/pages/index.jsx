@@ -5,15 +5,11 @@ import useSWR from 'swr'
 const fetcher = (url) => fetch(url).then((res) => res.json())
 
 export default function Index() {
-  const { data, error } = useSWR(
+  const { data } = useSWR(
     `${process.env.NEXT_PUBLIC_WEBSITE_URL}/api/get-likes`,
     fetcher
   )
-  if (error) {
-    window.alert(error)
-    alert(error)
-    return 'An error has occurred.'
-  }
+
   if (!data) return 'Loading...'
   const Pageprops = {
     HeaderTitle: 'Liderança 4.0',
