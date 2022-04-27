@@ -5,10 +5,7 @@ import useSWR from 'swr'
 const fetcher = (...args) => fetch(...args).then((res) => res.json())
 
 export default function Index() {
-  const { data } = useSWR(
-    `${process.env.NEXT_PUBLIC_WEBSITE_URL}/api/get-likes`,
-    fetcher
-  )
+  const { data } = useSWR('/api/get-likes', fetcher)
 
   if (!data) return 'Loading...'
   const Pageprops = {
