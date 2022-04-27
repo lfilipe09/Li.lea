@@ -21,13 +21,6 @@ export default async (req, res) => {
     )
   } catch (err) {
     console.log('deu erro ', err)
-    res.end(
-      JSON.stringify({
-        chapterOneLikes: null,
-        chapterTwoLikes: null,
-        chapterThreeLikes: null,
-        err: err
-      })
-    )
+    res.status(413).send(err)
   }
 }

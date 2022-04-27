@@ -34,13 +34,6 @@ export default async (req, res) => {
       })
     )
   } catch (err) {
-    res.end(
-      JSON.stringify({
-        chapterOneLikes: null,
-        chapterTwoLikes: null,
-        chapterThreeLikes: null,
-        err: err
-      })
-    )
+    res.status(413).send(err)
   }
 }
