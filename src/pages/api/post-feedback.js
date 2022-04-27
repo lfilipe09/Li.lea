@@ -12,7 +12,7 @@ export default async (req, res) => {
 
     const sheet = doc.sheetsByIndex[1]
 
-    return await sheet.addRow(JSON.stringify(req.body))
+    return await sheet.addRow(JSON.parse(req.body))
   } catch (err) {
     console.log('deu erro ', err)
     res.status(413).send(err)
