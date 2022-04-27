@@ -10,7 +10,6 @@ export default function Index() {
     fetcher
   )
 
-  if (!data) return 'Loading...'
   const Pageprops = {
     HeaderTitle: 'Liderança 4.0',
     author: 'Li.lea powered by HSM',
