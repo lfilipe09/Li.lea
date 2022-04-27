@@ -52,7 +52,6 @@ const Home = ({
     const response = await fetch(
       `${process.env.NEXT_PUBLIC_WEBSITE_URL}/api/get-likes`,
       {
-        mode: 'no-cors',
         method: 'GET',
         headers: {
           'Content-Type': 'application/json'
@@ -77,7 +76,6 @@ const Home = ({
       const response = await fetch(
         `${process.env.NEXT_PUBLIC_WEBSITE_URL}/api/update-like-amount`,
         {
-          mode: 'no-cors',
           method: 'POST',
           body: JSON.stringify(newChaptersLikes),
           headers: {
@@ -104,7 +102,6 @@ const Home = ({
       const response = await fetch(
         `${process.env.NEXT_PUBLIC_WEBSITE_URL}/api/post-feedback`,
         {
-          mode: 'no-cors',
           method: 'POST',
           body: JSON.stringify(newPostFeedback),
           headers: {
