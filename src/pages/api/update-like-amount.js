@@ -25,14 +25,7 @@ export default async (req, res) => {
 
     chapterThreeLikes.value = req.body.chapterThreeLikes
 
-    await sheet.saveUpdatedCells()
-    res.end(
-      JSON.stringify({
-        chapterOneLikes: chapterOneLikes.value,
-        chapterTwoLikes: chapterTwoLikes.value,
-        chapterThreeLikes: chapterThreeLikes.value
-      })
-    )
+    return await sheet.saveUpdatedCells()
   } catch (err) {
     res.status(413).send(err)
   }
