@@ -2,7 +2,7 @@ import Home from 'templates/Home'
 import bannerItems from '../components/BannerSlider/mock'
 import useSWR from 'swr'
 
-const fetcher = (url) => fetch(url).then((res) => res.json())
+const fetcher = (...args) => fetch(...args).then((res) => res.json())
 
 export default function Index() {
   const { data } = useSWR(
@@ -10,6 +10,7 @@ export default function Index() {
     fetcher
   )
 
+  if (!data) return 'Loading...'
   const Pageprops = {
     HeaderTitle: 'Liderança 4.0',
     author: 'Li.lea powered by HSM',
