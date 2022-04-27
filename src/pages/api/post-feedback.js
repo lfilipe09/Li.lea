@@ -2,7 +2,6 @@ import { GoogleSpreadsheet } from 'google-spreadsheet'
 import { fromBase64 } from '../../utils/base64'
 
 const doc = new GoogleSpreadsheet(process.env.SHEET_DOC_ID)
-
 export default async (req, res) => {
   try {
     await doc.useServiceAccountAuth({
@@ -14,7 +13,7 @@ export default async (req, res) => {
 
     const sheet = doc.sheetsByIndex[1]
 
-    await sheet.addRow(JSON.parse(req.body))
+    await sheet.addRow(JSON.stringify(req.body))
 
     res.end(console.log('deu bom!'))
   } catch (err) {
