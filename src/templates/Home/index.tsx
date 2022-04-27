@@ -85,7 +85,6 @@ const Home = ({
 
   const postFeedback = async (value: string[]) => {
     try {
-      console.log('olha o value chegando: ')
       const newPostFeedback = {
         lilea_chapter_1_feedback: value[0].toString(),
         lilea_chapter_1_likes: '.',
@@ -174,7 +173,7 @@ const Home = ({
                 }}
                 leftButtonLabel={
                   likeButtonClickedIndex.includes(index)
-                    ? (Number(chaptersLikes[index]) + 1).toString()
+                    ? (Number(newChaptersLikes[index]) + 1).toString()
                     : 'curtir'
                 }
                 rightButtonLabel={

@@ -22,7 +22,8 @@ export default async (req, res) => {
       JSON.stringify({
         chapterOneLikes: null,
         chapterTwoLikes: null,
-        chapterThreeLikes: null
+        chapterThreeLikes: null,
+        err: err
       })
     )
   }

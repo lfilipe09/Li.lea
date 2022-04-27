@@ -4,7 +4,7 @@ import bannerItems from '../components/BannerSlider/mock'
 export default function Index() {
   const Pageprops = {
     HeaderTitle: 'Liderança 4.0',
-    author: 'Thomaz Lira Gomes',
+    author: 'Li.lea powered by HSM',
     publicationDate: '2022-04-24T15:27:03.044Z',
     backgroundUrl: '/img/background-image.png',
     items: bannerItems,
