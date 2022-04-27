@@ -52,7 +52,10 @@ const Home = ({
     const response = await fetch(
       `${process.env.NEXT_PUBLIC_WEBSITE_URL}/api/get-likes`,
       {
-        method: 'GET'
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json'
+        }
       }
     )
     const data = await response.json()
@@ -74,7 +77,10 @@ const Home = ({
         `${process.env.NEXT_PUBLIC_WEBSITE_URL}/api/update-like-amount`,
         {
           method: 'POST',
-          body: JSON.stringify(newChaptersLikes)
+          body: JSON.stringify(newChaptersLikes),
+          headers: {
+            'Content-Type': 'application/json'
+          }
         }
       )
       console.log(response)
@@ -97,12 +103,15 @@ const Home = ({
         `${process.env.NEXT_PUBLIC_WEBSITE_URL}/api/post-feedback`,
         {
           method: 'POST',
-          body: JSON.stringify(newPostFeedback)
+          body: JSON.stringify(newPostFeedback),
+          headers: {
+            'Content-Type': 'application/json'
+          }
         }
       )
       console.log(response)
     } catch (err) {
-      console.log('Erro ao atualizar likes', err)
+      console.log('Erro ao postar feedback', err)
     }
   }
 
