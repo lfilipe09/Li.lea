@@ -6,7 +6,7 @@ const fetcher = (url) => fetch(url).then((res) => res.json())
 
 export default function Index() {
   const { data, error } = useSWR(
-    'https://api.github.com/repos/vercel/swr',
+    `${process.env.NEXT_PUBLIC_WEBSITE_URL}/api/get-likes`,
     fetcher
   )
   if (error) return 'An error has occurred.'
