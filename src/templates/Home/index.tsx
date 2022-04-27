@@ -13,7 +13,7 @@ import Menu from 'components/Menu'
 import TextChapterOpener from 'components/TextChapterOpener'
 import TextContent from 'components/TextContent'
 import TextSideColumn from 'components/TextSideColumn'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import * as S from './styles'
 import QuizBox from 'components/QuizBox'
 import quizItems from '../../components/QuizBox/mock'
@@ -44,27 +44,24 @@ const Home = ({
     chaptersLikes.map(Number)
   )
   // const [feedbackData, setFeedbackDate] = useState(['.', '.', '.'])
-  useEffect(() => {
-    loadData()
-  }, [])
 
-  const loadData = async () => {
-    const response = await fetch(
-      `${process.env.NEXT_PUBLIC_WEBSITE_URL}/api/get-likes`,
-      {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      }
-    )
-    const data = await response.json()
-    setNewChaptersLikes([
-      data.chapterOneLikes,
-      data.chapterTwoLikes,
-      data.chapterThreeLikes
-    ])
-  }
+  // const loadData = async () => {
+  //   const response = await fetch(
+  //     `${process.env.NEXT_PUBLIC_WEBSITE_URL}/api/get-likes`,
+  //     {
+  //       method: 'GET',
+  //       headers: {
+  //         'Content-Type': 'application/json'
+  //       }
+  //     }
+  //   )
+  //   const data = await response.json()
+  //   setNewChaptersLikes([
+  //     data.chapterOneLikes,
+  //     data.chapterTwoLikes,
+  //     data.chapterThreeLikes
+  //   ])
+  // }
 
   const updateLikes = async (value: string[]) => {
     try {

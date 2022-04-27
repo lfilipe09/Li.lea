@@ -1,14 +1,27 @@
 import Home from 'templates/Home'
 import bannerItems from '../components/BannerSlider/mock'
+import useSWR from 'swr'
+
+const fetcher = (url) => fetch(url).then((res) => res.json())
 
 export default function Index() {
+  const { data, error } = useSWR(
+    'https://api.github.com/repos/vercel/swr',
+    fetcher
+  )
+  if (error) return 'An error has occurred.'
+  if (!data) return 'Loading...'
   const Pageprops = {
     HeaderTitle: 'Liderança 4.0',
     author: 'Li.lea powered by HSM',
     publicationDate: '2022-04-24T15:27:03.044Z',
     backgroundUrl: '/img/background-image.png',
     items: bannerItems,
-    chaptersLikes: ['0', '0', '0']
+    chaptersLikes: [
+      data.chapterOneLikes,
+      data.chapterTwoLikes,
+      data.chapterThreeLikes
+    ]
   }
   return <Home {...Pageprops} />
 }
