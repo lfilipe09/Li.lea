@@ -8,6 +8,7 @@ export type TextContentProps = {
   imgUrlsDesktop?: string[]
   imgUrlsMobile?: string[]
   quiz?: JSX.Element
+  buttonUrl?: string
 }
 
 const TextContent = ({
@@ -15,7 +16,8 @@ const TextContent = ({
   content,
   imgUrlsDesktop,
   imgUrlsMobile,
-  quiz
+  quiz,
+  buttonUrl
 }: TextContentProps) => (
   <S.Wrapper data-cy="content">
     {!!title && (
@@ -42,6 +44,12 @@ const TextContent = ({
           <S.Image key={imgUrlMobile} src={imgUrlMobile} />
         ))}
       </MediaMatch>
+    )}
+
+    {!!buttonUrl && (
+      <a href={buttonUrl} target="_blank" rel="noreferrer">
+        Acesse aqui o conteúdo na íntegra
+      </a>
     )}
   </S.Wrapper>
 )

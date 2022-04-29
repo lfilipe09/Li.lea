@@ -159,6 +159,7 @@ const Home = ({
                 imgUrlsDesktop={item.imgDesktop}
                 imgUrlsMobile={item.imgMobile}
                 quiz={item.quiz ? <QuizBox items={quizItems} /> : undefined}
+                buttonUrl={item.buttonUrl === '' ? undefined : item.buttonUrl}
               />
             </S.ContentWrapper>
             <S.TextColumnWrapper>

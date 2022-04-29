@@ -15,7 +15,8 @@ export default [
     link: 'https://docs.google.com/presentation/d/19gO7md0-UUWP5svp2DicIomGpZRjSpxzsanqEHR9Yzs/edit?usp=sharing',
     imgDesktop: ['/img/content-01-desktop.png'],
     imgMobile: ['/img/content-01-mobile.png'],
-    quiz: false
+    quiz: false,
+    buttonUrl: 'https://bit.ly/3vLhrZW'
   },
   {
     img: '/img/thumb02.png',
@@ -28,7 +29,8 @@ export default [
     link: 'https://docs.google.com/presentation/d/1Dr7wKBKNMfNDnG3cLELeyy6EmXKlIgo1x8AWX86icEo/edit?usp=sharing',
     imgDesktop: ['/img/content-02-desktop.png'],
     imgMobile: ['/img/content-02-mobile.png'],
-    quiz: false
+    quiz: false,
+    buttonUrl: 'https://pwc.to/3knXX8q'
   },
   {
     img: '/img/thumb03.png',
@@ -41,6 +43,7 @@ export default [
     link: 'https://docs.google.com/presentation/d/1q-m6Yh_szNzywEFQz5NwECiiVz_vZkLb-aF5dCxaYno/edit?usp=sharing',
     imgDesktop: ['/img/content-03-desktop.png'],
     imgMobile: ['/img/content-03-mobile.png'],
-    quiz: false
+    quiz: false,
+    buttonUrl: 'https://bit.ly/3Kyzwjf'
   }
 ]

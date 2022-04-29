@@ -12,6 +12,7 @@ export type BannerProps = {
   imgDesktop?: string[]
   imgMobile?: string[]
   quiz?: boolean
+  buttonUrl?: string
 }
 
 const Banner = ({ img, title, format, handleOnClick }: BannerProps) => (
