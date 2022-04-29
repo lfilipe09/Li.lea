@@ -1,4 +1,5 @@
 import { ClockIcon } from 'components/Icons'
+import Button from 'components/Button'
 import { Close as CloseIcon } from '@styled-icons/material-outlined/Close'
 import { format } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
@@ -35,6 +36,9 @@ HeaderProps) => {
               locale: ptBR
             })}
           </p>
+          <S.ButtonWrapper onClick={() => setIsOpen(true)}>
+            <Button outline={true}>Saiba mais sobre esse Pack</Button>
+          </S.ButtonWrapper>
         </S.TitleContainer>
 
         <S.TimeContainer>

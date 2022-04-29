@@ -310,3 +310,8 @@ export const MenuFull = styled.nav<MenuFullProps>`
     }
   `}
 `
+
+export const ButtonWrapper = styled.div`
+  width: 24rem;
+  margin-top: 2rem;
+`
