@@ -21,15 +21,15 @@ Promova uma cultura de experimentação de baixo risco. Isso pode ser feito com 
 <hr />
 <h2>OS 4 NÍVEIS DE PROJETOS NO METAVERSO</h3>
 <br />
-<b>Básica</b><br />
+<b>Básico</b><br />
 Criação de protótipos e criação de redes de fornecedores e parceiros de tecnologia. </b><br /><br />
 <b>Emergente</b><br />
 Desdobramentos de produtos e serviços já existentes em experiências no metaverso. 
 <br /><br />
-<b>Avançada</b><br />
+<b>Avançado</b><br />
 Criação de experiências e serviços nativos do metaverso, com possibilidade de abrigar bases massivas de usuários. 
 <br /><br />
-<b>Diferenciada</b><br />
+<b>Diferenciado</b><br />
 Desenvolvimento de linhas de negócio específicas para o metaverso e criação de ecossistemas proprietários em ambientes de imersão digital. 
 <br /><br />
 
